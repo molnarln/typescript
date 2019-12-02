@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "initial_typescipt_project"
+		},
+		{
+			"path": "strings"
+		},
+		{
+			"path": "control_flow"
+		},
+		{
+			"path": "data_structures"
+		}
+	],
+	"settings": {}
+}
