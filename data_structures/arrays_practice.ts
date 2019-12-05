@@ -156,8 +156,11 @@ copyOfNumListToReverse.reverse();
 console.log(`The original numbers: ${numListToReverse}`);
 console.log(`The reversed numbers: ${copyOfNumListToReverse}`);
 
-let temparray: number[] = [];
+let tempArray: number[] = [];
 for (let i = 0; i < numListToReverse.length; i++) {
-    temparray[i] = numListToReverse[numListToReverse.length - (i + 1)];
+    tempArray[i] = numListToReverse[numListToReverse.length - (i + 1)];
 }
-console.log(`The second reversed array: ${temparray}`);
+console.log(`The second reversed array: ${tempArray}`);
+for (const item of numListToReverse) {
+    console.log(item);
+}
