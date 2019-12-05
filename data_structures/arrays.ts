@@ -88,8 +88,6 @@ console.log(`The second item in secondTuple is: ${secondTuple[1]}`);
 
 let myNewTuple: [string, number] = ['valaki', 13];
 
-
-
 interface IPerson {
     firstName: string;
     lastName: string;
