@@ -150,7 +150,8 @@ matrix.forEach(e => console.log(e));
 // -  Print the elements of the reversed `numList`
 
 let numListToReverse: number[] = [3, 4, 5, 6, 7];
-
+// a ... (spread) operátor shallow copy-t készít, de mivel az array primitíveket tartalmaz, így ebben az esetben teljesen új array lesz az eredmény. Reference
+// type-nál már nem működne (csak egy szintig megy a shallow copy), object-eket vagy array-eket tartalmazó array-nél deep copy kell (lodash library)
 let copyOfNumListToReverse: number[] = [...numListToReverse];
 copyOfNumListToReverse.reverse();
 console.log(`The original numbers: ${numListToReverse}`);
