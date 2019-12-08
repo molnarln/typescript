@@ -138,9 +138,13 @@ var copyOfNumListToReverse = __spreadArrays(numListToReverse);
 copyOfNumListToReverse.reverse();
 console.log("The original numbers: " + numListToReverse);
 console.log("The reversed numbers: " + copyOfNumListToReverse);
-var temparray = [];
+var tempArray = [];
 for (var i = 0; i < numListToReverse.length; i++) {
-    temparray[i] = numListToReverse[numListToReverse.length - (i + 1)];
+    tempArray[i] = numListToReverse[numListToReverse.length - (i + 1)];
 }
-console.log("The second reversed array: " + temparray);
+console.log("The second reversed array: " + tempArray);
+for (var _i = 0, numListToReverse_1 = numListToReverse; _i < numListToReverse_1.length; _i++) {
+    var item = numListToReverse_1[_i];
+    console.log(item);
+}
 //# sourceMappingURL=arrays_practice.js.map
