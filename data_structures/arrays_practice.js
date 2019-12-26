@@ -149,4 +149,3 @@ for (var _i = 0, numListToReverse_1 = numListToReverse; _i < numListToReverse_1.
     var item = numListToReverse_1[_i];
     console.log(item);
 }
-//# sourceMappingURL=arrays_practice.js.map
