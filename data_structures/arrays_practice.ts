@@ -165,3 +165,28 @@ console.log(`The second reversed array: ${tempArray}`);
 for (const item of numListToReverse) {
     console.log(item);
 }
+
+let anotherArray: number[] = [];
+anotherArray[0] = 1;
+anotherArray[1] = 1;
+anotherArray[2] = 1;
+anotherArray[3] = 1;
+anotherArray.forEach(e => console.log(e));
+function valami(e: number) {
+    return e * 3;
+}
+let multipliedArray: number[] = [];
+anotherArray = anotherArray.map(e => valami(e));
+anotherArray.forEach(e => console.log(e));
+console.log('-----------------------------------------');
+anotherArray.forEach(function (val: number, i: number) {
+    anotherArray[i] = val * 3;
+});
+
+anotherArray.forEach(e => console.log(e));
+function multiplyArrayByThree(val: number, i: number, array: number[]) {
+   array[i] = val * 3;
+}
+anotherArray.forEach(e => multiplyArrayByThree(e, anotherArray.indexOf(e), anotherArray));
+
+anotherArray.forEach(e => console.log(e));
