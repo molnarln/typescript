@@ -171,12 +171,16 @@ anotherArray[0] = 1;
 anotherArray[1] = 1;
 anotherArray[2] = 1;
 anotherArray[3] = 1;
+
+console.log("AnotherArray eredetileg: ");
 anotherArray.forEach(e => console.log(e));
-function valami(e: number) {
+function haromszorozo(e: number) {
     return e * 3;
 }
+
 let multipliedArray: number[] = [];
-anotherArray = anotherArray.map(e => valami(e));
+anotherArray = anotherArray.map(e => haromszorozo(e));
+console.log("AnotherArray felszorozva 3-mal a haromszorozo function-nel: ");
 anotherArray.forEach(e => console.log(e));
 console.log('-----------------------------------------');
 anotherArray.forEach(function (val: number, i: number) {
@@ -185,7 +189,7 @@ anotherArray.forEach(function (val: number, i: number) {
 
 anotherArray.forEach(e => console.log(e));
 function multiplyArrayByThree(val: number, i: number, array: number[]) {
-   array[i] = val * 3;
+    array[i] = val * 3;
 }
 anotherArray.forEach(e => multiplyArrayByThree(e, anotherArray.indexOf(e), anotherArray));
 

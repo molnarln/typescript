@@ -149,15 +149,26 @@ for (var _i = 0, numListToReverse_1 = numListToReverse; _i < numListToReverse_1.
     var item = numListToReverse_1[_i];
     console.log(item);
 }
-var anotherarray = [];
-anotherarray[0] = 1;
-anotherarray[1] = 1;
-anotherarray[2] = 1;
-anotherarray[3] = 1;
-anotherarray.forEach(function (e) { return console.log(e); });
+var anotherArray = [];
+anotherArray[0] = 1;
+anotherArray[1] = 1;
+anotherArray[2] = 1;
+anotherArray[3] = 1;
+anotherArray.forEach(function (e) { return console.log(e); });
 function valami(e) {
-    e * 3;
+    return e * 3;
 }
-anotherarray.forEach(function (e) { return valami(e); });
-anotherarray.forEach(function (e) { return console.log(e); });
+var multipliedArray = [];
+anotherArray = anotherArray.map(function (e) { return valami(e); });
+anotherArray.forEach(function (e) { return console.log(e); });
+console.log('-----------------------------------------');
+anotherArray.forEach(function (val, i) {
+    anotherArray[i] = val * 3;
+});
+anotherArray.forEach(function (e) { return console.log(e); });
+function multiplyArrayByThree(val, i, array) {
+    array[i] = val * 3;
+}
+anotherArray.forEach(function (e) { return multiplyArrayByThree(e, anotherArray.indexOf(e), anotherArray); });
+anotherArray.forEach(function (e) { return console.log(e); });
 //# sourceMappingURL=arrays_practice.js.map
