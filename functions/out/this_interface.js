@@ -1,37 +1,25 @@
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-(function () {
-    var deck = {
+(() => {
+    let deck = {
         suits: ["hearts", "spades", "clubs", "diamonds"],
         cards: Array(52),
         // NOTE: The function now explicitly specifies that its callee must be of type Deck
         createCardPicker: function () {
-            var _this = this;
-            return function () {
-                var pickedCard = Math.floor(Math.random() * 52);
-                var pickedSuit = Math.floor(pickedCard / 13);
-                return { suit: _this.suits[pickedSuit], card: pickedCard % 13 };
+            return () => {
+                let pickedCard = Math.floor(Math.random() * 52);
+                let pickedSuit = Math.floor(pickedCard / 13);
+                return { suit: this.suits[pickedSuit], card: pickedCard % 13 };
             };
         }
     };
-    var cardPicker = deck.createCardPicker();
-    var pickedCard = cardPicker();
+    let cardPicker = deck.createCardPicker();
+    let pickedCard = cardPicker();
     console.log("card: " + pickedCard.card + " of " + pickedCard.suit);
 })();
 // Return type annotated as `: Foo`
 function foo(sample) {
     return sample;
 }
-var longhandtest = function (input) { return input; };
+let longhandtest = (input) => { return input; };
 console.log(longhandtest(4));
 var drummer = {};
 drummer.age = 27;
@@ -45,41 +33,43 @@ console.log(myFunction(2, 3));
 //     setTimeout(function() { console.log(i); }, 100 * i);
 // }
 function theCityThatAlwaysSleeps() {
-    var getCity;
+    let getCity;
     if (true) {
-        var city_1 = "Seattle";
+        let city = "Seattle";
         getCity = function () {
-            return city_1;
+            return city;
         };
     }
     return getCity();
 }
 console.log(theCityThatAlwaysSleeps());
-var _a = [1, 2, 3, 4], first = _a[0], rest = _a.slice(1);
+let [first, ...rest] = [1, 2, 3, 4];
 console.log(first); // outputs 1
 console.log(rest); // outputs [ 2, 3, 4 ]
-var maradek = rest;
+let maradek = rest;
 console.log(maradek);
-var defaults = { food: "spicy", price: "$$", ambiance: "noisy" };
-var search = __assign(__assign({}, defaults), { food: "rich" });
-var Greeter = /** @class */ (function () {
-    function Greeter(message) {
+let defaults = { food: "spicy", price: "$$", ambiance: "noisy" };
+let search = Object.assign(Object.assign({}, defaults), { food: "rich" });
+class Greeter {
+    constructor(message) {
         this.greeting = message;
     }
-    Greeter.prototype.greet = function () {
+    greet() {
         console.log("Hello, " + this.greeting);
-    };
-    return Greeter;
-}());
-var greet = new Greeter("hi there!");
+    }
+}
+let greet = new Greeter("hi there!");
 greet.greet();
-var obj = { input: "hello" };
+let obj = { input: "hello" };
 console.log(obj.input);
-var test1 = { input1: "valami" };
-var specialImplemented = function (a, b, c) {
-    if (c === void 0) { c = ''; }
+let test1 = { input1: "valami" };
+let specialImplemented = (a, b, c = '') => {
     console.log(a + b + c);
 };
-var _b = ["egy ", "kettő ", "három"], a = _b[0], bc = _b.slice(1);
+let [a, ...bc] = ["egy ", "kettő ", "három"];
 specialImplemented(a, bc.join(''));
+class firstClass {
+}
+firstClass.calculateSum = (a, b) => { return a + b; };
+console.log(firstClass.calculateSum(2, 3));
 //# sourceMappingURL=this_interface.js.map

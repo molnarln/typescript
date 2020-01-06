@@ -4,6 +4,6 @@
         "rootDir": "./",
         "sourceMap": true,
         "moduleResolution": "node",
-        "target": "es5"
+        "target": "es6"
     }
 }

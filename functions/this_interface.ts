@@ -110,7 +110,6 @@ let obj = { input: <string>"hello" }
 
 console.log(obj.input);
 
-
 interface testFace {
     input1: string
 }
@@ -125,3 +124,9 @@ let specialImplemented: specialFunction = (a: string, b: string, c: string = '')
 }
 let [a, ...bc] = ["egy ", "kettő ", "három"];
 specialImplemented(a, bc.join(''));
+
+class firstClass {
+    static calculateSum = (a: number, b: number) => { return a + b };
+}
+
+console.log(firstClass.calculateSum(2,3));

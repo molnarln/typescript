@@ -8,5 +8,9 @@
     "build": "tsc"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/underscore": "^1.9.4",
+    "underscore": "^1.9.1"
+  }
 }

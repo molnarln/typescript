@@ -5,7 +5,7 @@
             "type": "node",
             "request": "launch",
             "name": "Build Project",
-            "program": "${workspaceFolder}\\this_interface.ts",
+            "program": "${workspaceFolder}\\function_workshop.ts",
             "preLaunchTask": "npm: build",
             "sourceMaps": true,
             "smartStep": true,
