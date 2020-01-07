@@ -1,4 +1,4 @@
-import * as _ from 'underscore';
+// import * as _ from 'underscore';
 (() => {
     // -  Create a variable named `baseNum` and assign the value `123` to it
     // -  Create a function called `doubling` that doubles it's input parameter and returns with an integer
@@ -25,10 +25,34 @@ import * as _ from 'underscore';
     let appendAFunc = (input) => { return input + 'a'; };
     console.log(appendAFunc(typo));
     // Write a function called `sum` that returns the sum of numbers from zero to the given parameter
-    function sum(input) {
-        let array = _.range(input);
-        return array.reduce((a, b) => { return a + b; });
+    // function sum(input: number): number {
+    //     let array: number[] = _.range(input + 1);
+    //     return array.reduce((a: number, b: number): number => { return a + b });
+    // }
+    // console.log(sum(4));
+    // // -  Create a function called `factorio`
+    // //    that returns it's input's factorial
+    // let factorio = (input: number) => {
+    //     let array: number[] = _.range(1, input + 1);
+    //     return array.reduce((a: number, b: number): number => { return a * b });
+    // }
+    // console.log(factorio(3));
+    // -  Create a function called `printParams`
+    //    which logs to the console the input parameters
+    //    (can have multiple number of arguments)
+    function printParams(...rest) {
+        let output = "";
+        rest.forEach(e => output += `${e} `);
+        console.log(output);
     }
-    console.log(sum(3));
+    printParams("hahahaaaa", 2, 3, "loool");
+    let pets = new Set(["Cat", "Dog", "Hamster"]);
+    pets["species"] = "mammals";
+    for (let pet in pets) {
+        console.log(pet); // "species"
+    }
+    for (let pet of pets) {
+        console.log(pet); // "Cat", "Dog", "Hamster"
+    }
 })();
 //# sourceMappingURL=function_workshop.js.map
