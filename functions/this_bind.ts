@@ -18,3 +18,19 @@
     console.log("card: " + pickedCard.card + " of " + pickedCard.suit);
 })()
 
+class Greeter2 {
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return () => {
+            console.log("Hello, " + this.greeting);
+        }
+    }
+}
+
+let g = new Greeter2("wow");
+
+let thing = g.greet();
+thing();
