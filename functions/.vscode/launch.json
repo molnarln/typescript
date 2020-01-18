@@ -5,7 +5,7 @@
             "type": "node",
             "request": "launch",
             "name": "Build Project",
-            "program": "${workspaceFolder}\\this_bind.ts",
+            "program": "${workspaceFolder}\\this_arrow.ts",
             "preLaunchTask": "npm: build",
             "sourceMaps": true,
             "smartStep": true,
