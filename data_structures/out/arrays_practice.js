@@ -8,6 +8,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
             r[k] = a[j];
     return r;
 };
+var _this = this;
 var magicNumbers = [1, 3, 5, 7];
 console.log(magicNumbers[2]);
 // -  Create a variable named `firstList`
@@ -106,7 +107,7 @@ console.log(sum);
 //    0 1 0 0
 //    1 0 0 0
 //
-// -  Print this two dimensional list to the console
+// -  Print array two dimensional list to the console
 //
 // * size should depend on a variable
 // ** Relax, a matrix is just like an array
@@ -154,12 +155,14 @@ anotherArray[0] = 1;
 anotherArray[1] = 1;
 anotherArray[2] = 1;
 anotherArray[3] = 1;
+console.log("AnotherArray eredetileg: ");
 anotherArray.forEach(function (e) { return console.log(e); });
-function valami(e) {
+function haromszorozo(e) {
     return e * 3;
 }
 var multipliedArray = [];
-anotherArray = anotherArray.map(function (e) { return valami(e); });
+anotherArray = anotherArray.map(function (e) { return haromszorozo(e); });
+console.log("AnotherArray felszorozva 3-mal a haromszorozo function-nel: ");
 anotherArray.forEach(function (e) { return console.log(e); });
 console.log('-----------------------------------------');
 anotherArray.forEach(function (val, i) {
@@ -170,5 +173,10 @@ function multiplyArrayByThree(val, i, array) {
     array[i] = val * 3;
 }
 anotherArray.forEach(function (e) { return multiplyArrayByThree(e, anotherArray.indexOf(e), anotherArray); });
+anotherArray.forEach(function (e) { return console.log(e); });
+anotherArray.forEach(function (val, ind, array) {
+    _this[ind] = _this[ind] * 3;
+}, anotherArray);
+console.log('--------------------------------------------');
 anotherArray.forEach(function (e) { return console.log(e); });
 //# sourceMappingURL=arrays_practice.js.map

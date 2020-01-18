@@ -119,7 +119,7 @@ console.log(sum);
 //    0 1 0 0
 //    1 0 0 0
 //
-// -  Print this two dimensional list to the console
+// -  Print array two dimensional list to the console
 //
 // * size should depend on a variable
 // ** Relax, a matrix is just like an array
@@ -193,4 +193,11 @@ function multiplyArrayByThree(val: number, i: number, array: number[]) {
 }
 anotherArray.forEach(e => multiplyArrayByThree(e, anotherArray.indexOf(e), anotherArray));
 
+anotherArray.forEach(e => console.log(e));
+
+// in here use normal anonymous functions, not arrow function, because arrow functions cannot be bound, thisArg cannot be used:
+anotherArray.forEach(function(val, ind, array) {
+    this[ind] = this[ind] * 3;
+}, anotherArray);
+console.log('--------------------------------------------');
 anotherArray.forEach(e => console.log(e));
