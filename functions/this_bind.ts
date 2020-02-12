@@ -19,3 +19,4 @@
 
     console.log("card: " + pickedCard.card + " of " + pickedCard.suit);
 })()
+

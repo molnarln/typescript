@@ -60,7 +60,8 @@
 
     let pets = new Set(["Cat", "Dog", "Hamster"]);
     pets["species"] = "mammals";
-
+    console.log(pets["species"]);
+    
     console.log("----------------------------------------")
 
     for (let pet in pets) {
