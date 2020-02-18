@@ -48,6 +48,7 @@
     printParams("hahahaaaa", 2, 3, "loool");
     let pets = new Set(["Cat", "Dog", "Hamster"]);
     pets["species"] = "mammals";
+    console.log(pets["species"]);
     console.log("----------------------------------------");
     for (let pet in pets) {
         console.log(pet); // "species"
