@@ -1,9 +1,9 @@
 'use strict';
-var matrixTest = [];
-var inputOfMatrixTest = 5;
+let matrixTest = [];
+let inputOfMatrixTest = 5;
 console.log(matrixTest);
-for (var i = 0; i <= inputOfMatrixTest; i++) {
-    for (var j = 0; j <= inputOfMatrixTest; j++) {
+for (let i = 0; i <= inputOfMatrixTest; i++) {
+    for (let j = 0; j <= inputOfMatrixTest; j++) {
         // Előbb ellenőrizni kell, hogy létezik-e a második dimenziós array. Ha nem, létre kell hozni.
         if (!matrixTest[i]) {
             matrixTest[i] = [];
