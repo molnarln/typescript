@@ -8,7 +8,8 @@ let myMap2 = new Map([
 // myMap2.forEach((v, k, m) => console.log(`${v} (ISBN: ${k})`));
 function getKeyByValue(map, value) {
     let returnValue = '';
-    //return [...map].find(([key, val]) => val === value)[0];
+    // Ez az egysoros megoldás is működik:
+    // return [...map].find(([key, val]) => val === value)[0];
     for (const [k, v] of map.entries()) {
         if (v === value) {
             returnValue = k;
