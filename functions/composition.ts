@@ -15,5 +15,5 @@ let sayHiMixin = {
  }
  // copy the methods
  Object.assign(Person123.prototype, sayHiMixin);
- // Compiles and runs well:clera
+ // Compiles and runs well:
  new Person123("John").sayHi();

@@ -15,13 +15,13 @@ function Dog(age, weight) {
 var Spot = new Dog(8, 65)
 var Bingo = new Dog(10, 70)
 
-Dog.prototype.bark = function() {
+Dog.prototype.bark = function () {
     console.log('woof woof')
 }
 Spot.bark() // => 'woof woof'
 Bingo.bark() // => 'woof woof'
 
-Bingo.ugat = function(){
+Bingo.ugat = function () {
     console.log('ugatas');
 }
 Bingo.ugat();
