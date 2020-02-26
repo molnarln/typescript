@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/core-js": "^2.5.3",
     "@types/underscore": "^1.9.4",
+    "core-js": "^3.6.4",
     "underscore": "^1.9.1"
   }
 }

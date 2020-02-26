@@ -21,4 +21,3 @@ b['thirdProperty'] = 'asdfasfd';
 console.log(b['thirdProperty']);
 console.log(Object.keys(b));
 console.log(Object.values(b));
-

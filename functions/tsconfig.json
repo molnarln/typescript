@@ -4,6 +4,7 @@
         "rootDir": "./",
         "sourceMap": true,
         "moduleResolution": "node",
-        "target": "esnext"
+        "target": "ESNext",
+        "experimentalDecorators": true
     }
 }
