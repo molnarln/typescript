@@ -92,7 +92,7 @@ interface IPerson {
     firstName: string;
     lastName: string;
 }
-var persons: { [id: number]: IPerson; } = {};
+var persons: { [key: number]: IPerson; } = {};
 persons["p1"] = { firstName: "F1", lastName: "L1" };
 persons[1] = { firstName: "f2", lastName: "l2" };
 console.log(typeof (persons[1]));
