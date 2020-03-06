@@ -101,3 +101,4 @@ for (const key in persons) {
     console.log(`The key is : ${key}, the value is: ${persons[key]}`)
 
 }
+
