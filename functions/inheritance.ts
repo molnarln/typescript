@@ -15,7 +15,6 @@ Shape.prototype.move = function (x, y) {
 function Rectangle() {
   Shape.call(this); // call super constructor.
 }
-
 // subclass extends superclass
 Rectangle.prototype = Object.create(Shape.prototype);
 
@@ -23,7 +22,6 @@ Rectangle.prototype = Object.create(Shape.prototype);
 //it will take prototype.constructor of Shape (parent).
 //To avoid that, we set the prototype.constructor to Rectangle (child).
 Rectangle.prototype.constructor = Rectangle;
-
 var rect = new Rectangle();
 
 console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // true
